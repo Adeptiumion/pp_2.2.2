@@ -19,11 +19,6 @@ public class CarDaoImpl implements CarDao {
         cars.add(new Car("Shoha", "Grey", 100));
     }
 
-
-    public int getSizeOfCarsList(){
-        return cars.size();
-    }
-
     @Override
     public List<Car> getCar(int count) {
         return count >= 5 ? cars.stream().toList() : cars.stream().limit(count).toList();
