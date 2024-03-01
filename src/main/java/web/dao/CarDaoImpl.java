@@ -16,7 +16,6 @@ public class CarDaoImpl implements CarDao {
         cars.add(new Car("Toyota", "White", 800));
         cars.add(new Car("Shoha", "Grey", 100));
     }
-
     @Override
     public List<Car> getCars(int count) {
         return cars.stream().limit(count).toList();
