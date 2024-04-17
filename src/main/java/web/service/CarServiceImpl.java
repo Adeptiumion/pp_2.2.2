@@ -15,6 +15,6 @@ public class CarServiceImpl implements CarService {
     }
     @Override
     public List<Car> getCars(int count) {
-        return carDao.getCars(Math.min(count, 5)); // Вдруг юзверь передаст больше 5-ки в count, машин то всего 5 наплодили.
+        return carDao.getCars().stream().limit(count).toList();
     }
 }
